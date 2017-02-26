@@ -82,22 +82,52 @@ for(i in 1:dim(klienci)[2]){
 }
 
 
-# cwiczenie #
+# cwiczenie 1 - zbior danych iris #
 head(iris)
 
-# zdefiniuj nowa zmienna 
-
-# policz srednia zmiennej Petal.Length dla kazdego poziomu zmiennej Species
-
-
+# odpowiedz na pytania: 
+# jaki gatunek (zmienna Species) moze miec kwaity sersze, ni¿ 2 cm?
+# ile jest takich obserwacji w probce?
 
 
+# zdefiniuj nowa zmienna Petal.Surface jako 1/2 *Petal.Length * Petal.Width
+
+
+# policz srednia zmiennej Petal.Surface dla kazdego poziomu zmiennej Species
+
+
+# cwiczenie 2 - zbior danych mtcars#
+head(mtcars)
+#[, 1]   mpg     Miles/(US) gallon
+#[, 2]   cyl     Number of cylinders
+#[, 3]   disp    Displacement (cu.in.)
+#[, 4]   hp      Gross horsepower
+#[, 5]   drat    Rear axle ratio
+#[, 6]   wt      Weight (lb/1000)
+#[, 7]   qsec    1/4 mile time
+#[, 8]   vs      V/S
+#[, 9]   am      Transmission (0 = automatic, 1 = manual)
+#[,10]   gear    Number of forward gears
+#[,11]   carb    Number of carburetors
+
+
+# odpowiedz na pytanie:
+# ile samochodow z probki ma conajmniej 190 koni mechanicznych (zmienna hp)
+
+
+# stworz histogram zmiennej mpg (licza mil jakie samochod jest w stanie przejachac na galonie paliwa)
+
+
+# zbuduj model regresji liniowej pomiedzy zmienna mpg a zmiennymi wt, qsec, am
+# funkcja lm(zmienna_objasniana ~ zmienna_objasniajaca_1 + zmienna_objasniajaca_2, data = ramka_danych)
+
+
+# wykonaj funkcje summary na dopasowanym modelu
 
 
 
 
 # materialy dodatkowe #
-
 
 ### pakiet dplyr ###
 install.packages('dplyr')
@@ -133,5 +163,11 @@ install.packages('ggplot2')
 library(ggplot2)
 ggplot(klienci) + geom_density(aes(income, group = default,fill = factor(default)), adjust=2, alpha = 0.5)
 ggplot(iris) + geom_point(aes(x = Sepal.Length, y = Petal.Length, group = Species, colour = Species))
+
+
+# cwiczenie 3 - petle #
+# napisz petle, ktora bedzie :
+# a) dopasowywac model jednowymiarowy regresji liniowej pomiedzy zmienna mpg i kazda ze pozostalych zmiennych
+# b) przekazywac do konsoli wynik funkcji summary dla kazdego z modeli
 
 
