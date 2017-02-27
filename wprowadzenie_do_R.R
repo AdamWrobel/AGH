@@ -127,7 +127,22 @@ head(mtcars)
 
 
 
-# materialy dodatkowe #
+#### materialy dodatkowe ####
+
+### definiowanie funkcji ###
+
+mean_excluding_zeros <- function(input_vector){
+  temp <- input_vector[input_vector!= 0]
+  output <- mean(temp)
+  return(output)
+}
+wektor <- c(0,2,3,0,4, 0)
+mean(wektor)
+mean_excluding_zeros(wektor)
+
+
+
+
 
 ### pakiet dplyr ###
 install.packages('dplyr')
@@ -163,6 +178,9 @@ install.packages('ggplot2')
 library(ggplot2)
 ggplot(klienci) + geom_density(aes(income, group = default,fill = factor(default)), adjust=2, alpha = 0.5)
 ggplot(iris) + geom_point(aes(x = Sepal.Length, y = Petal.Length, group = Species, colour = Species))
+
+
+
 
 
 # cwiczenie 3 - petle #
