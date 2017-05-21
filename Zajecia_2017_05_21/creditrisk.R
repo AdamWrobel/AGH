@@ -1,4 +1,4 @@
-setwd("E:/1TB_disk/Dane/Projekty/R_projects/AGH/AGH_walidacja_modeli")
+
 library(zoo)
 
 # read data
